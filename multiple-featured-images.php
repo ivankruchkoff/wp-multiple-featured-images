@@ -58,7 +58,7 @@ if( !class_exists( 'kdMultipleFeaturedImages' ) ) {
         public function __construct( $args ) {
             $this->labels       = wp_parse_args( $args['labels'], $this->default_labels );
             unset( $args['labels'] );
-            $args               = wp_parse_args( $args, $this->default_args );
+            $this->args         = wp_parse_args( $args, $this->default_args );
             $this->id           = $args['id'];
             $this->post_type    = $args['post_type'];
             
